@@ -1,13 +1,15 @@
 import React from "react";
-import Signup from "./pages/Signup";
-import "./App.css";
 
-function App() {
+import "../src/App.css";
+
+import Theme from '../src/styles/theme';
+
+export default function App({ Component, pageProps }) {
   return (
-    <div className="App">
-      <Signup />
-    </div>
+    <>
+      <Theme>
+        <Component {...pageProps} />
+      </Theme>
+    </>
   );
 }
-
-export default App;
